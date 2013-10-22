@@ -1,0 +1,29 @@
+﻿.clickable {
+    font-size: 14px;
+    padding: 1em;
+    line-height: 100%;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .clickable:hover {
+        outline: 0 none;
+        text-decoration: none;
+        color: #fff;
+    }
+
+.panel {
+    font-size: 0;
+}
+
+.left-clickable {
+    border-bottom-left-radius: 1em 1em;
+    border-top-left-radius: 1em 1em;
+}
+
+.right-clickable {
+    border-bottom-right-radius: 1em 1em;
+    border-top-right-radius: 1em 1em;
+}

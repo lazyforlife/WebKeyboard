@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>WebKeyboard</title>
+</head>
+<body>
+    <button id="Button1">-</button>
+    <button id="Button2">Mute</button>
+    <button id="Button3">+</button>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="Scripts/JavaScript.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $("#Button1").click(quieter)
+            $("#Button2").click(mute)
+            $("#Button3").click(louder)
+            
+        });
+    </script>
+</body>
+</html>
