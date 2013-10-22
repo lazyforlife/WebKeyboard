@@ -25,6 +25,7 @@ namespace WebKeyboardDesktop
         {
             infoTextBox.Text += MakeHumanString(e.ProgressPercentage) + Environment.NewLine;
             infoTextBox.ScrollToCaret();
+            notifyIcon1.ShowBalloonTip(100, "Media event", ((VirtualKeyCode)e.ProgressPercentage).ToString(), ToolTipIcon.Info);
         }
 
         string MakeHumanString(int keycode)
