@@ -23,7 +23,8 @@ namespace WebKeyboardDesktop
 
         void backgroundWorker1_ProgressChanged(object sender, System.ComponentModel.ProgressChangedEventArgs e)
         {
-            textBox1.Text += MakeHumanString(e.ProgressPercentage) + Environment.NewLine;
+            infoTextBox.Text += MakeHumanString(e.ProgressPercentage) + Environment.NewLine;
+            infoTextBox.ScrollToCaret();
         }
 
         string MakeHumanString(int keycode)
@@ -31,13 +32,6 @@ namespace WebKeyboardDesktop
             return string.Format("{0} {1} {2}", DateTime.Now, keycode, ((VirtualKeyCode)keycode).ToString());
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "Muting" + Environment.NewLine;
-            InputSimulator.SimulateKeyPress(VirtualKeyCode.VOLUME_MUTE);
-        }
-
         private void Form1_Resize(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Minimized)
@@ -73,7 +67,7 @@ namespace WebKeyboardDesktop
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            infoTextBox.Text = "";
         }
 
     }
